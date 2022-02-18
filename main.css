@@ -1,4 +1,6 @@
 /* Document
+  Section 1-3 referenced modern-normalize rules for CSS
+  modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize
   =========================================================================== */
 /**
 * Macros to import pixel-styled fonts.
@@ -15,8 +17,7 @@
   font-weight: normal;
   font-size: normal
 }
-/* Section 1 - This section referenced modern-normalize rules for CSS
-   modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize
+/* Section 1
    ========================================================================== */
 /**
 /* Use a better box model (opinionated). */
@@ -55,8 +56,7 @@ body {
 h1 {
   font-family: 'pixel_highlight';
 }
-/* Text-level - This section referenced modern-normalize rules for CSS
-   modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize
+/* Section 2 - Text-level
    ========================================================================== */
 /* Add the correct text decoration in Chrome, Edge, and Safari. */
 abbr[title] {
@@ -102,8 +102,7 @@ sub {
 sup {
   top: -0.5em;
 }
-/* Forms - This section referenced modern-normalize rules for CSS
-   modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize
+/* Section 3 - Forms
    ========================================================================== */
 /**
  * 1. Change the font styles in all browsers.
@@ -114,7 +113,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: 'pixel_04b03';
+  font-family: inherit;
   /* 1 */
   font-size: 100%;
   /* 1 */
@@ -140,23 +139,20 @@ button,
   -webkit-appearance: button;
 }
 /* Remove the inner border and padding in Firefox. */
-button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
+::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
 }
 /* Restore the focus styles unset by the previous rule. */
-button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
-  outline: 1px dotted ButtonText;
+:-moz-focusring {
+	outline: 1px dotted ButtonText;
 }
-/* Correct the padding in Firefox. */
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
+/**
+  Remove the additional ':invalid' styles in Firefox.
+  See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+:-moz-ui-invalid {
+	box-shadow: none;
 }
 /* Remove the padding so developers are not caught out when they zero out `fieldset` elements in all browsers. */
 legend {
@@ -167,8 +163,8 @@ progress {
   vertical-align: baseline;
 }
 /* Correct the cursor style of increment and decrement buttons in Safari. */
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
   height: auto;
 }
 /**
@@ -176,13 +172,11 @@ progress {
   2. Correct the outline style in Safari.
  */
 [type='search'] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 /* Remove the inner padding in Chrome and Safari on macOS. */
-[type='search']::-webkit-search-decoration {
+::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 /**
@@ -190,12 +184,10 @@ progress {
   2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
-/* Interactive
+/* Section 4 - Interactive
    ========================================================================== */
 /*
  * Add the correct display in Chrome and Safari.
@@ -335,7 +327,6 @@ td {
   margin: 0 auto;
   background: #DAF1EC;
 }
-
 .main .main-content {
   flex: 1;
   display: flex;
@@ -545,32 +536,6 @@ td {
     padding-top: 56.25%;
   }
 }
-.tags-container {
-  padding: 32px 32px;
-  flex: 1;
-  text-align: center;
-}
-.tags-container .tag {
-  display: inline-block;
-  padding: 8px 16px;
-  margin: 8px;
-  background: #f8f9fa;
-  color: #495057;
-  border-radius: 2px;
-  font-size: 14px;
-}
-.tags-container .tag:hover {
-  background: #e9ecef;
-  color: #212529;
-}
-.current-tag-container .title {
-  text-align: center;
-  font-size: 18px;
-  margin-bottom: 24px;
-}
-.about-page {
-  padding: 24px 32px;
-}
 .site-footer {
   font-size: 12px;
   text-align: center;
@@ -580,7 +545,7 @@ td {
   justify-content: center;
   align-items: center;
 }
-.author-link {
+#author-link {
   width:100%;
   margin:0 auto;
   padding:5px;
