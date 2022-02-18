@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Page Not Found </title>
+  <link rel="icon" href="assets/avatar_small.ico">
+  <link rel="stylesheet" href="main.css">
+  <meta name="description" content="website description" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      text-align: center;
+    }
+    .box {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .number {
+      font-size: 64px;
+      color: #666;
+      font-family: 'pixel_highlight';
+      font-weight: normal;
+      letter-spacing: 0.25em;
+    }
+    .text {
+      font-size: 16px;
+      margin: 36px;
+      color: #333;
+    }
+    .btn-container {
+      display: flex;
+      justify-content: center;
+    }
+    .btn {
+      display: inline-block;
+      background: #fff;
+      border: 2px solid #efefef;
+      color: #333;
+      margin: 12px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center
+    }
+    .site-footer {
+      margin-left: auto;
+      margin-right: auto
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="number">404</div>
+    <div class="text">
+      Page not found. <br><br> ๐·°(৹˃̵﹏˂̵৹)°·๐
+    </div>
+    <div class="btn-container">
+      <button class="btn" id="back">
+        <image src="assets/back_svg.png" height="25" width="70"/>
+      </button>
+    </div>
+  </div>
+  <div class="site-footer">
+    <div id="author-link"> Powered by
+      <a href="https://github.com/kouenYoung" target="_blank"><strong>kouenYoung</strong></a>
+    </div>
+  </div>
+  <script>
+    var back = document.getElementById('back')
+    back.onclick = function() { console.log('run...'); history.back() }
+  </script>
+</body>
+</html>
