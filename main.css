@@ -6,14 +6,14 @@
  */
 @font-face {
   font-family: 'pixel_04b03';
-  src: url(04B03REV.TTF);
+  src: url(assets/04B03REV.TTF);
   font-weight: normal;
   font-size: normal
 }
 
 @font-face {
   font-family: 'pixel_highlight';
-  src: url(04B_30_.TTF);
+  src: url(assets/04B_30_.TTF);
   font-weight: normal;
   font-size: normal
 }
