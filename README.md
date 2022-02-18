@@ -2,9 +2,9 @@
 
 Pixirater is a music rating website with a pixel-art-inspired user interface.
 
-## Installation
+## Live Demo
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Here is a live demo: https://kouenyoung.github.io/333yhy.github.io/
 
 ```bash
 pip install foobar
